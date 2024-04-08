@@ -1,0 +1,67 @@
+<div class = "main">
+  <div class = "wrapper">
+    <h1>S'INSCRIRE</h1>
+    <p>Veuillez saisir vos informations pour vous inscrire.</p>
+    <form [formGroup]="account" id="form">
+      <div class = "form-group">
+        <div class="form-infos">
+          <label for="nom">Nom*</label>
+          <input formControlName = "lastname" type="text" id="nom" class="form-control" aria-describedby="emailHelp" placeholder="Doe">
+        </div>
+        <div class = "erreur" *ngIf="lastnameControl()?.invalid && (lastnameControl()?.dirty || lastnameControl()?.touched)">
+          <div *ngIf="lastnameControl()?.errors?.['required']"> Le nom est obligatoire.</div>
+        </div>
+        <div class="form-infos">
+          <label for="prenom">Prénom*</label>
+          <input formControlName = "firstname" type="text" id = "prenom" class="form-control"  placeholder="John">
+        </div>
+        <div class = "erreur" *ngIf="firstnameControl()?.invalid && (firstnameControl()?.dirty || firstnameControl()?.touched)">
+          <div *ngIf="firstnameControl()?.errors?.['required']"> Le prénom est obligatoire.</div>
+        </div>
+      </div>
+      <div class = "form-group">
+        <div class="form-infos">
+          <label for="age">Âge*</label>
+          <input formControlName = "age" type="number" id = "age" class="form-control"  placeholder="18">
+        </div>
+        <div class = "erreur" *ngIf="ageControl()?.invalid && (ageControl()?.dirty || ageControl()?.touched)">
+          <div *ngIf="ageControl()?.errors?.['required']"> L'âge est obligatoire.</div>
+          <div *ngIf="ageControl()?.errors?.['min']"> L'âge doit être supérieur à 18.</div>
+        </div>
+        <div class="form-infos">
+          <label for="email">Adresse email*</label>
+          <input formControlName = "email" type="email" id = "email" class="form-control"  placeholder="john.doe@example.com">
+        </div>
+        <div class = "erreur" *ngIf="emailControl()?.invalid && (emailControl()?.dirty || emailControl()?.touched)">
+          <div *ngIf="emailControl()?.errors?.['required']"> L'email est obligatoire.</div>
+        </div>
+        <div class="form-infos">
+          <label for="mdp">Mot de passe*</label>
+          <input formControlName = "password" type="password" id = "mdp" class="form-control"  placeholder="******">
+        </div>
+        <div class = "erreur" *ngIf="passwordControl()?.invalid && (passwordControl()?.dirty || passwordControl()?.touched)">
+          <div *ngIf="passwordControl()?.errors?.['required']"> Le mot de passe est obligatoire.</div>
+        </div>
+        <div [formGroup]= "confirm" class = "form-infos">
+          <label for="confirm-mdp">Confirmer le mot de passe*</label>
+          <input formControlName = "confirmPassword" type="password" id = "confirm-mdp" class="form-control"  placeholder="******">
+        </div>
+        <div class = "erreur" *ngIf="confirmPasswordControl()?.invalid && (confirmPasswordControl()?.dirty || confirmPasswordControl()?.touched)">
+          <div *ngIf="confirmPasswordControl()?.errors?.['required']"> La confirmation du mot de passe est obligatoire.</div>
+        </div>
+        <div class = "erreur" *ngIf="badPassword"> {{badPassword}}</div>
+      </div>
+      <div class = "erreur" *ngIf="nullInputs"> {{nullInputs}}</div>
+      <div class="row justify-content-center mt-4">
+        <button id = "regi" (click) = "register()" class="btn btn-primary oval-button">Inscription</button>
+      </div>
+      <div class = "erreur" *ngIf="messageError">
+        {{messageError}}
+        <div class="row justify-content-center mt-4">
+          <button id = "seco" [routerLink]="['/login']" routerLinkActive = "active" class="btn btn-primary oval-button">Se connecter</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

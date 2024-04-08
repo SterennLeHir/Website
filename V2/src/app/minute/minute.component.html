@@ -1,0 +1,14 @@
+<app-nav></app-nav>
+<div *ngIf="minute">
+  <h2>COMPTE RENDU DU {{minute.date}}</h2><br>
+  <h3>Contenu</h3>
+  <p>{{minute.content}}</p>
+  <div class = "informations">
+    <div class = "info">
+      <h3> Liste des participants </h3>
+      <app-users-list [members] = "voters" [id] = "idAssociation"></app-users-list>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

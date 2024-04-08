@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<div class = "container">
+  <h2>LES UTILISATEURS</h2>
+  <p>Ici vous trouverez la liste complète des utilisateurs. Vous pouvez également en chercher un en particulier !</p>
+  <div id = "search-input">
+    <input id = "cherche" type = "search" (keydown)="search($event)" placeholder="Je cherche un utilisateur">
+  </div>
+
+  <div *ngIf="message">
+    <p id="error">{{message}}</p>
+  </div>
+  <ul class = "list">
+    <li *ngFor = "let user of dataSource">
+      <app-user-item [myData] = "user"></app-user-item>
+    </li>
+  </ul>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,21 @@
+<header>
+  <div id ="bar">
+  <nav>
+    <div class = "menu1">
+        <a [routerLink]="['/home']" routerLinkActive = "active">
+          <img src = "../../assets/images/Logo.svg" alt="logo" id = "logo">
+        </a>
+        <a [routerLink]="['/associations']" routerLinkActive = "active">Les associations<span class="sr-only"></span></a>
+        <a [routerLink]="['/users']" routerLinkActive = "active">Les utilisateurs<span class="sr-only"></span></a>
+    </div>
+    <div class = "menu2">
+        <a id = "logout" *ngIf="isLogged" (click)="logout()" routerLinkActive="active">Se déconnecter</a>
+        <a id = "account" [routerLink]="['/account']">Mon compte
+          <img src = "../../assets/images/Utilisateur.png" alt="user" id = "logo2">
+        </a>
+    </div>
+  </nav>
+    <hr id = "line">
+  </div>
+
+</header>

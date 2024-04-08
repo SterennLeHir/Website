@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+  <tr *ngFor="let member of members">
+    <td class = "closer-cells">{{ member.firstname + ' ' + (member.lastname|uppercase)}}</td>
+    <td class = "closer-cells">{{getRole(member)}}</td>
+    <td class = "closer-cells">{{ member.age + ' ans'}}</td>
+    <td class="button-cell">
+      <button class="btn btn-primary"  id = "consult" [routerLink]="['/users', member.id]" routerLinkActive = "active">Consulter</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

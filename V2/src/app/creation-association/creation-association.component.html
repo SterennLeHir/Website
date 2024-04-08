@@ -1,0 +1,22 @@
+<app-nav></app-nav>
+<div class = "main">
+  <div class = "wrapper">
+    <h1>CREER UNE ASSOCIATION</h1>
+    <div id="form">
+      <div class = "form-group">
+        <div class="form-infos">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" class="form-control" aria-describedby="emailHelp" placeholder="SuperAssociation">
+        </div>
+        <div class="form-infos">
+          <label for="description">Description</label>
+          <textarea id = "description" class="form-control" rows="3" placeholder="blablabla"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center mt-4">
+    <button (click)="validate()" class="btn btn-primary">Confirmer</button>
+  </div>
+</div>
+<app-footer></app-footer>

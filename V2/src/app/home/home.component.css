@@ -1,0 +1,34 @@
+.main {
+  height: 80%;
+  width: 100%;
+  display: table;
+}
+.wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.oval-button {
+  font-size: 20px !important;
+  padding: 20px 100px;
+  line-height: 0.1; /* Ajustez la line-height pour aligner le texte au centre */
+}
+
+#btn\ left {
+  margin-right: 2.5%;
+}
+
+#btn\ right {
+  margin-left: 2.5%;
+}
+h1,h3 {
+  margin-bottom: 50px;
+}
+button {
+  border-radius: 18px;
+}
+row justify-content-center mt-4 {
+  display: flex;
+  justify-content: space-between;
+}

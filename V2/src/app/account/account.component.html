@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<div class = "main">
+  <div class = "wrapper">
+<div id = "centered-div" *ngIf="user">
+  <div id ="button">
+    <button  class="btn btn-primary" id = "delete btn" (click)="delete()">Supprimer mon compte</button>
+  </div>
+  <h2>MON COMPTE</h2>
+  <h3>Informations</h3>
+  <div class = "informations">
+    <div class = "detail-info">
+      <img src = "assets/images/Utilisateur.png">
+      <p>{{user.firstname}} {{user.lastname}}</p>
+    </div>
+    <div class = "detail-info">
+      <img src = "assets/images/Mail.svg">
+      <p>{{user.email}}</p>
+    </div>
+    <div class = "detail-info">
+      <img src = "assets/images/Cake.svg">
+      <p>{{user.age}} ans</p>
+    </div>
+  </div>
+  <div class = "buttons">
+    <button  class="btn btn-primary oval-button"  id = "btn left" [routerLink]="['/modifier-mes-informations']" routerLinkActive = "active">Modifier mes informations</button>
+    <button  class="btn btn-primary oval-button" id = "btn right" [routerLink]="['/modifier-mot-de-passe']" routerLinkActive = "active">Changer de mot de passe</button>
+  </div>
+</div>
+  </div>
+</div>
+<app-footer></app-footer>

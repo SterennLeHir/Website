@@ -1,0 +1,32 @@
+<app-nav></app-nav>
+<div *ngIf="user">
+  <h2>{{user.firstname}} {{user.lastname | uppercase}}</h2><br>
+  <h3>Contact</h3>
+  <p>{{user.email}}</p>
+  <h3>Informations</h3>
+  <div class = "informations">
+    <div class = "info">
+      <img src = "assets/images/Cake.svg">
+      <h5>Âge</h5>
+      <p>{{user.age}} ans</p>
+    </div>
+    <div class = "info">
+      <img src = "assets/images/Minutes.svg">
+      <h5>Association</h5>
+      <ul class = "list">
+        <li *ngFor = "let asso of associations">
+          <p>{{asso.name}}</p>
+        </li>
+      </ul>
+    </div>
+    <!--<div class = "info">
+      <h5>Rôle</h5>
+      <ul class = "list">
+        <li *ngFor = "let role of roles">
+          <p>{{role}}</p>
+        </li>
+      </ul>
+    </div>-->
+  </div>
+</div>
+<app-footer></app-footer>

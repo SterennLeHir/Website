@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%}
+body {
+  margin: 0;
+  width:auto;
+  font-family: Inter, sans-serif !important;
+  overflow-x: hidden !important; /* pas d'overflow sur l'axe x*/
+  overflow-y: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+h1, h2, h3, h4, h5, p {
+  color: #0A369D;
+  text-align:center;
+  font-family: Inter, sans-serif !important;
+}
+p {
+  font-size: 16px;
+}
+h1 {
+  font-size: 90px !important;
+  font-weight: bold !important;
+}
+
+h2 {
+  font-size: 80px !important;
+  font-weight: bold !important;
+}
+
+h3 {
+  font-size: 35px !important;
+  font-weight: bold !important;
+}
+
+h4{
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
+
+h5{
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+button {
+  background-color: #0A369D !important;
+  color:white;
+  height: 35px !important;
+  width: auto;
+  font-family: Inter, sans-serif;
+  font-size: 25px;
+  border-radius: 18px !important;
+  border : 4px solid #0A369D !important;
+  vertical-align: middle !important;
+  padding : 0 10px 0 10px !important;
+}
+button:hover {
+  line-height: 1;
+  background-color: white !important;
+  color:#0A369D !important;
+  border: 4px solid;
+  box-sizing: border-box;
+  border-radius: 18px;
+  border-color: #0A369D !important;
+  vertical-align: middle !important;
+}
+
+a {
+  color:#0A369D;
+  height: 35px;
+  width: auto;
+  text-decoration: none !important;
+  font-family: Inter, sans-serif;
+}
+
+app-root {
+  flex: 1 !important;
+}

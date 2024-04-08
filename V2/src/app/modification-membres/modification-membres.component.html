@@ -1,0 +1,47 @@
+<app-nav></app-nav>
+<div class = "main">
+  <div class = "wrapper">
+    <h2>MODIFIER LES MEMBRES</h2>
+    <div id="form">
+        <div class = "info">
+          <h5>Membres</h5>
+          <ul class = "list">
+            <li *ngFor = "let member of membersModified.concat(newMembers)">
+              <div class= elem>
+                <div class= "nom">
+                  <span class="delete-icon" (click)="deleteMember(member)">
+                <mat-icon>delete</mat-icon>
+              </span>
+                  {{ member.firstname + " "}}{{member.lastname | uppercase}}
+                </div>
+                <div class="roles">
+                  <select [(ngModel)]="member.role">
+                    <option *ngFor="let role of Object.values(RoleValue) | keyvalue">
+                      {{role.value}}
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class = "ajout">
+          <h5>Ajouter un membre</h5>
+          <select [(ngModel)]="selectedUser">
+            <option *ngFor="let user of users" [ngValue]= user>
+              {{ user.firstname + " "}}{{user.lastname | uppercase}}
+            </option>
+          </select>
+          <button (click)="addMember()" class="btn btn-primary" id ="ajouter">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  <div class = centered>
+    <button (click)="validate()" class="btn btn-primary">Confirmer</button>
+    <p id = "no-user">Votre membre n'est pas encore utilisateur ?</p>
+    <button [routerLink]="['/register']" routerLinkActive = "active" class="btn btn-primary" id = "register">Créer un utilisateur</button>
+  </div>
+
+
+</div>
+<app-footer></app-footer>

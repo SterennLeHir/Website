@@ -1,0 +1,26 @@
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-family : Inter, sans-serif;
+  line-height: 100px;
+}
+
+button {
+  margin-top: 50px;
+  border-radius: 18px;
+  width:250px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 30%;
+}

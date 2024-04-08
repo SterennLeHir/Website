@@ -1,0 +1,18 @@
+<app-nav></app-nav>
+<div class = "container">
+  <h2>LES ASSOCIATIONS</h2>
+  <p>Ici, vous trouverez la liste complète des associations. Vous pouvez également en chercher une en particulier ou en ajouter une !</p>
+  <div id = "buttons">
+    <button class="btn btn-primary"  id = "creer" [routerLink]="['/creer-association']" routerLinkActive = "active">Ajouter une association</button>
+    <input id = "cherche" type = "search" (keydown)="search($event)" placeholder="Je cherche une association">
+  </div>
+  <div *ngIf="message">
+    <p id="error">{{message}}</p>
+  </div>
+  <ul class = "list">
+    <li *ngFor = "let asso of dataSource">
+      <app-association-item [myData] = "asso"></app-association-item>
+    </li>
+  </ul>
+</div>
+<app-footer></app-footer>

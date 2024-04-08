@@ -1,0 +1,13 @@
+<app-nav></app-nav>
+<div class = "main">
+  <div class = "wrapper">
+    <h1> QUE CHERCHEZ-VOUS ? </h1>
+    <h3> Trouvez une association ou un utilisateur</h3>
+    <div class="row justify-content-center mt-4">
+      <button  class="btn btn-primary oval-button"  id = "btn left" [routerLink]="['/associations']" routerLinkActive = "active">Associations</button>
+      <button  class="btn btn-primary oval-button" id = "btn right" [routerLink]="['/users']" routerLinkActive = "active">Utilisateurs</button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+

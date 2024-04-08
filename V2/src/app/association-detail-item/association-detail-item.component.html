@@ -1,0 +1,31 @@
+<app-nav></app-nav>
+<div *ngIf="association" id = "centered-div">
+  <div id = "buttons">
+    <button  class="btn btn-primary"  id = "modif" [routerLink]="['/modifier-association', association.id]" routerLinkActive = "active">Modifier</button>
+    <button  class="btn btn-primary"  id = "suppr" (click)="delete()">Supprimer</button>
+  </div>
+  <h2>{{association.name |uppercase}}</h2><br>
+  <p>{{association.description}}</p>
+  <h3>Informations</h3>
+  <div class = "informations">
+    <div class = "info">
+      <img src = "assets/images/Minutes.svg">
+      <h5> Comptes rendus </h5>
+      <ul class = "list">
+        <li *ngFor = "let minute of minutes">
+          <a [routerLink]="['/minute', minute.id]" routerLinkActive = "active">{{minute.date}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class = "info">
+      <img src = "assets/images/Membres.svg">
+      <h5>Membres</h5>
+      <p> {{nbMembers}}</p>
+    </div>
+  </div>
+  <h3>Liste des membres</h3>
+  <app-users-list [members]="members" [id]="id"></app-users-list>
+  <button  class="btn btn-primary"  id = "modif-membres" [routerLink]="['/modifier-membres', association.id]" routerLinkActive = "active">Modifier les membres</button>
+</div>
+<app-footer></app-footer>
+

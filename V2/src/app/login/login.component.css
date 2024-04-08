@@ -1,0 +1,55 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#form {
+  display: flex;
+  flex-direction: row;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.form-group{
+  width: 40%;
+  margin: auto;
+}
+
+a {
+  background-color: #0A369D;
+  color: white;
+  border-radius: 18px;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.boutons {
+  margin-top: 2.5%;
+  display:flex;
+  justify-content: center;
+}
+
+h1,p {
+  margin-bottom: 50px;
+}
+
+#left {
+margin-right: 2.5%
+}
+
+#right {
+  margin-left: 2.5%;
+}
+
+.erreur p {
+  color: red;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 10px;
+}

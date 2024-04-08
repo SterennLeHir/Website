@@ -1,0 +1,35 @@
+h2 {
+  margin-top: 5%;
+  margin-bottom: 50px;
+}
+h3, p {
+  margin-bottom: 20px;
+}
+ul {
+  list-style-type: none;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0A369D;
+  font-family: Inter, sans-serif;
+}
+
+img {
+  margin-bottom: 10px;
+}
+
+.informations {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.list{
+  padding-right: 40px;
+}

@@ -1,0 +1,22 @@
+<app-nav></app-nav>
+<div class = "main">
+  <div class = "wrapper">
+    <h1>MODIFIER L'ASSOCIATION</h1>
+    <form [formGroup]="association" (submit) = "submit($event)" id="form">
+      <div class = "form-group">
+        <div class="form-infos">
+          <label for="nom">Nom</label>
+          <input formControlName="name" type="text" id="nom" class="form-control" aria-describedby="emailHelp">
+        </div>
+        <div class="form-infos">
+          <label for="description">Description</label>
+          <textarea formControlName="description" id = "description" class="form-control" rows="3"></textarea>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <button type="submit" class="btn btn-primary">Confirmer</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

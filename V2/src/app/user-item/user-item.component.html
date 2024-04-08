@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-content>
+    <div class = "container" *ngIf="myData">
+        <h3>{{myData.firstname}} {{myData.lastname}}</h3>
+        <p>{{myData.age}} ans </p>
+        <p>{{myData.email}}</p>
+        <button [routerLink]="['/users', myData.id]" routerLinkActive = "active" class="btn btn-primary" id = "btn right">Voir plus</button>
+    </div>
+  </mat-card-content>
+</mat-card>

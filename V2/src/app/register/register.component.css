@@ -1,0 +1,59 @@
+.main {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.wrapper {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 25%;
+  margin-left: 25%;
+}
+
+.form-group{
+  width: 40%;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+.erreur {
+  display: flex;
+  flex-direction : column;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+}
+
+.erreur{
+  color: red;
+}
+
+a {
+  background-color: #0A369D;
+  color: white;
+  border-radius: 18px;
+}
+
+.oval-button {
+  font-size: 20px !important;
+  padding: 20px 100px;
+  line-height: 0.1; /* Ajustez la line-height pour aligner le texte au centre */
+  border-radius: 18px;
+}
+
+#regi{
+  margin-bottom: 2%;
+}
+
+#seco{
+  margin-bottom: 5%;
+}
